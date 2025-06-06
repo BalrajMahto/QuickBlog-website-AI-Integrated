@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 
 const BlogCard = ({blog}) => {
     
-    const { title, description, category,image, id} = blog;
+    const { title, description, category, image, _id } = blog;
     const navigate = useNavigate();
     return (
  <div
-  onClick={() => navigate(`/blog/${id}`)}
+  onClick={() => navigate(`/blog/${_id}`)}
   className="w-full bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md hover:scale-102 hover:shadow-primary/30 transition duration-200 cursor-pointer"
 >
   <img src={image} alt="Blog" className="w-full h-44 object-cover rounded-t-lg" />
